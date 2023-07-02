@@ -40,9 +40,9 @@ def upload():
     return render_template('upload.html')
 
 
-@app.route('/three/')
-def three():
-    return render_template('three.html')
+@app.route('/text_area/')
+def text_area():
+    return render_template('text_area.html')
 
 
 @app.route('/logout')
