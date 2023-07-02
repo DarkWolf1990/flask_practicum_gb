@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+<title>Login</title>
+{% block nav %} {% endblock %}
+{% block content %}
+    <h2 class="login_h2">Для входа в систему ввидете логин и пароль! </h2>
+    <form class="login_form" method="post">
+    <div class="block_form">
+        <input class="fild_name_form" type="text" name="username" placeholder="Введите ваше имя"><br>
+        <input class="fild_password_form" type="password" name="password" placeholder="Введите ваш пароль"><br>
+        <input class="login_fm" type="submit" value="Войти">
+    </div>
+    </form>
+
+{% endblock %}

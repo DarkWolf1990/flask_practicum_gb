@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} <title>UPLOAD</title> {% endblock %}
+{% block content %}
+    <h2 class="donwload_h2">Загрузка файлов тут!</h2>
+    <form class="form_upload" method="post" enctype="multipart/form-data">
+     <div class="input__wrapper">
+   <input name="file" type="file" id="input__file" class="input input__file" multiple>
+   <label for="input__file" class="input__file-button">
+      <span class="input__file-icon-wrapper"><img class="input__file-icon" src="{{url_for('static', filename='images/add.svg')}}" alt="Выбрать файл" width="25"></span>
+      <span class="input__file-button-text">Выберите файл</span>
+   </label>
+         <input class="btn_b" type="submit" name="submit">
+</div>
+    </form>
+{% endblock %}
+{% block footer %} {% endblock %}

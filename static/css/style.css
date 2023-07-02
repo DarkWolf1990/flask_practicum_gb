@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "Microsoft Sans Serif";
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    margin-left: calc(50% - 720px);
+    margin-right: calc(50% - 720px);
+}
+
+
+
+.nav{
+    max-width: 1440px;
+    max-height: 1080px;
+    background-color: #3155b2;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: azure;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.nav_a{
+    text-decoration: none;
+    color: azure;
+}
+
+.navigation:hover{
+    background-color: #59aaee;
+}
+
+.nav_a:hover {
+    background-color: #5c78ef;
+}
+
+
+.text_top_h1{
+    font-family: "Microsoft Sans Serif";
+    color: #070783;
+    font-size: 36px;
+    font-weight: lighter;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.btn{
+    display: flex;
+    width: 210px;
+    height: 60px;
+    padding-left: 70px;
+    padding-top: 18px;
+    color: #e0e3f3;
+    font-family: "Microsoft Sans Serif";
+    font-size: large;
+    background-color: #1616c7;
+    margin-left: 620px;
+    margin-top: 75px;
+    border-radius: 30px;
+}
+
+.btn:hover{
+    background-color: #132c93;
+}
+
+.donwload_h2{
+    font-family: "Microsoft Sans Serif";
+    font-size: 24px;
+    color: #132c93;
+    margin-top: 110px;
+    text-align: center;
+
+
+}
+
+.input__wrapper {
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.input__file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.input__file-icon-wrapper {
+  height: 60px;
+  width: 60px;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid #fff;
+}
+
+.input__file-button-text {
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.input__file-button {
+  width: 100%;
+  max-width: 290px;
+  height: 60px;
+  background: #070783;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+
+.input__file-button:hover {
+    background-color: #7676e0;
+    
+}
+
+.btn_b{
+    width: 100%;
+  max-width: 290px;
+  height: 60px;
+  background: #070783;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+
+.btn_b:hover {
+    background-color: #7676e0;
+
+}
+
+.login_h2{
+        display: flex;
+    justify-content: center;
+    color: #070783;
+    margin-top: 60px;
+    margin-left: 40px;
+
+    font-family: "Roboto Light";
+    font-size: 40px;
+
+}
+
+.login_form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 550px;
+    width: 300px;
+
+}
+.block_form{
+    background-color: rgba(234, 240, 245, 0.73);
+    border: 1px solid #132c93;
+    width: 400px;
+    height: 250px;
+}
+
+.fild_name_form{
+    background-color: #d7e9f8;
+    border-radius: 5px;
+    color: #070783;
+    height: 30px;
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+.fild_password_form{
+    margin-top: 10px;
+     background-color: #d7e9f8;
+    border-radius: 5px;
+    color: #070783;
+    height: 30px;
+    margin-left: 100px;
+
+}
+
+.login_fm{
+    margin-top: 30px;
+    margin-left: 138px;
+    width: 110px;
+    height: 40px;
+    background-color: #8cc5f5;
+    color: #070783;
+}
+
+.login_fm:hover{
+    background: #6d8fe7;
+}
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{% block title %}<title>Title</title> {% endblock %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+<div class="container">
+{% block nav %}
+    <nav class="nav">
+    <ul class="navigation">
+        <li><a class="nav_a" href="{{ url_for('home') }}">HOME</a></li>
+        <li><a class="nav_a" href="{{ url_for('upload') }}">UPLOAD</a></li>
+        <li><a class="nav_a" href="{{ url_for('three') }}">THREE</a></li>
+        <li><a class="nav_a" href="{{ url_for('login') }}">LOGOUT</a></li>
+    </ul>
+</nav>
+{% endblock %}
+{% block content %}
+{% endblock %}
+{% block footer %} {% endblock %}
+</div>
+</body>
+</html>

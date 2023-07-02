@@ -1,0 +1,140 @@
+2023-06-24 13:52:58 +0000 : Initialization
+2023-06-24 13:52:58 +0000 : USER ID : 30922
+2023-06-24 13:52:58 +0000 : App Version : 3.0(230303)
+2023-06-24 13:52:58 +0000 : OS : Версия 13.4 (Выпуск 22F66)
+2023-06-24 13:52:58 +0000 : TimeZone : Europe/Moscow GMT+3 10800
+2023-06-24 13:52:58 +0000 : Locale : ru_RU
+2023-06-24 13:52:58 +0000 : applicationWillFinishLaunching
+2023-06-24 13:52:58 +0000 : applicationDidFinishLaunching
+2023-06-24 13:52:59 +0000 : API - sysinfo
+2023-06-24 13:52:59 +0000 : API Parameters- {
+    "batt_cycle" = 50;
+    "board_id" = "--";
+    cpu = "--";
+    display = 1440x900;
+    family = "MacBook Pro";
+    "hdd_cap" = 494384795648;
+    "hdd_type" = "--";
+    host = "macbook-pro-sergey.local";
+    locale = "ru_RU";
+    mac = "B0:BE:83:77:D9:3A";
+    model = "MacBookPro17,1";
+    os = "\U0412\U0435\U0440\U0441\U0438\U044f 13.4 (\U0412\U044b\U043f\U0443\U0441\U043a 22F66)";
+    platform = 1;
+    ram = 8589934592;
+    serial = FVFJ103YQ05F;
+    smc = "--";
+    timezone = "Europe/Moscow GMT+3 10800";
+    username = darkwolf;
+    uuid = "B9ED4F2A-537F-5E9A-A070-55DBDD13ADFD";
+    version = "--";
+}
+2023-06-24 13:53:00 +0000 : API Response sysinfo - {
+    error =     {
+        code = 200;
+        message = "";
+    };
+    params =     {
+        config =         {
+            "app_bundle_id" = "com.appyogi.OmniTranslate";
+            "app_maintenance_enabled" = 0;
+            "app_maintenance_text" = "App is currently under maintenance. Please check back later.";
+            "app_more_native_enabled" = 1;
+            "app_more_promo_enabled" = 1;
+            "app_promo_enabled" = 1;
+            "app_ratings_appOpen" = "3,6";
+            "app_ratings_days" = 3;
+            "app_ratings_enabled" = 1;
+            "app_ratings_events" = 15;
+            "app_ratings_remindPeriod" = 3;
+            "app_script_updated_at" = 1671546263;
+            "app_share_enabled" = 1;
+            "app_share_text" = "Hey am using [app-name]. You can download from [app-url].";
+            "app_translate_api_enabled" = 0;
+            "app_url_about" = "https://appyogi.com/webapps/index.php?product_id=44&source=com.appyogi.OmniTranslate&ref=about";
+            "app_url_api" = Nill;
+            "app_url_base" = Nill;
+            "app_url_base_translate" = "https://translate.google.com";
+            "app_url_more" = "https://appyogi.com/apps/?ref=com.appyogi.OmniTranslate&source=app";
+            "app_url_rating" = "macappstore://itunes.apple.com/app/id1175751480";
+            "app_url_support" = "https://appyogi.com/support/?ref=com.appyogi.OmniTranslate&ref=about";
+            "app_url_translate" = "https://translate.google.com/#view=home&op=translate&sl=%@&tl=%@&text=%@";
+            "app_user_agent" = "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15\"";
+            "app_version_current" = "3.0";
+            "app_version_legacy" = "2.3";
+            "app_version_minimum" = "2.5";
+            "app_version_promptForUpdate" = "2.5";
+            "app_version_promptText" = "You are currently using an old version of the app. You enjoy the latest features please Upgrade";
+            "app_welcome_version" = 1678305993;
+            "doc_translation_enabled" = 1;
+            "doc_translation_enabled_version" = "11.3";
+        };
+        "user_id" = 30922;
+    };
+}
+2023-06-24 13:53:00 +0000 : API Error sysinfo - (null)
+2023-06-24 13:53:00 +0000 : API - verify
+2023-06-24 13:53:00 +0000 : API Parameters- {
+    receipt = "Cg==";
+    status = 11402;
+}
+2023-06-24 13:53:00 +0000 : checkScriptUpdate
+2023-06-24 13:53:00 +0000 : NO UPDATED SCRIPT
+2023-06-24 13:53:00 +0000 : loadWindow
+2023-06-24 13:53:00 +0000 : promptForUpdateIfAvailable
+2023-06-24 13:53:01 +0000 : LGVC initialSetup
+2023-06-24 13:53:01 +0000 : LGVC viewWillAppear
+2023-06-24 13:53:01 +0000 : LGVC translateFromHistory
+2023-06-24 13:53:03 +0000 : API Response verify - {
+    error =     {
+        code = 400;
+        message = "The data in the receipt-data property was malformed or missing";
+    };
+    "user_id" = 30922;
+}
+2023-06-24 13:53:03 +0000 : API Error verify - (null)
+2023-06-24 13:53:07 +0000 : statusItemButton_Clicked
+2023-06-24 13:53:07 +0000 : LGVC viewWillAppear
+2023-06-24 13:53:07 +0000 : LGVC translateFromHistory
+2023-06-24 13:53:11 +0000 : LGVC swapButton_Clicked
+2023-06-24 13:53:25 +0000 : LGVC translateButton_Clicked
+2023-06-24 13:53:31 +0000 : LGVC copyButton_Clicked
+2023-06-24 13:53:38 +0000 : LGVC swapButton_Clicked
+2023-06-24 13:53:42 +0000 : LGVC swapButton_Clicked
+2023-06-24 13:53:45 +0000 : LGVC sourceLanguageButton_Clicked
+2023-06-24 13:53:57 +0000 : statusItemButton_Clicked
+2023-06-24 13:53:57 +0000 : LGVC viewWillAppear
+2023-06-24 13:53:57 +0000 : LGVC translateFromHistory
+2023-06-24 13:54:01 +0000 : LGVC translateButton_Clicked
+2023-06-24 13:54:07 +0000 : LGVC copyButton_Clicked
+2023-06-24 13:54:10 +0000 : LGVC destinationLanguageButton_Clicked
+2023-06-24 13:54:18 +0000 : LGVC translateButton_Clicked
+2023-06-24 13:54:23 +0000 : LGVC copyButton_Clicked
+2023-06-24 13:54:33 +0000 : LGVC swapButton_Clicked
+2023-06-24 13:54:37 +0000 : LGVC sourceLanguageButton_Clicked
+2023-06-24 13:54:46 +0000 : LGVC swapButton_Clicked
+2023-06-24 13:54:46 +0000 : LGVC translateButton_Clicked
+2023-06-24 13:54:51 +0000 : LGVC copyButton_Clicked
+2023-06-24 13:55:12 +0000 : LGWC attachmentButton_Clicked
+2023-06-24 13:55:12 +0000 : LGWC initialSetup
+2023-06-24 14:00:01 +0000 : statusItemButton_Clicked
+2023-06-24 14:00:01 +0000 : LGVC viewWillAppear
+2023-06-24 14:00:01 +0000 : LGVC translateFromHistory
+2023-06-24 14:00:04 +0000 : LGVC translateButton_Clicked
+2023-06-24 14:00:07 +0000 : LGVC copyButton_Clicked
+2023-06-24 14:00:16 +0000 : statusItemButton_Clicked
+2023-06-24 14:00:16 +0000 : LGVC viewWillAppear
+2023-06-24 14:00:16 +0000 : LGVC translateFromHistory
+2023-06-24 14:00:18 +0000 : LGVC translateButton_Clicked
+2023-06-24 14:00:22 +0000 : LGVC copyButton_Clicked
+2023-06-24 18:00:57 +0000 : statusItemButton_Clicked
+2023-06-24 18:00:57 +0000 : LGVC viewWillAppear
+2023-06-24 18:00:57 +0000 : LGVC translateFromHistory
+2023-06-24 18:01:00 +0000 : LGVC swapButton_Clicked
+2023-06-24 18:01:00 +0000 : LGVC translateButton_Clicked
+2023-06-24 18:01:04 +0000 : LGVC copyButton_Clicked
+2023-06-24 18:01:23 +0000 : statusItemButton_Clicked
+2023-06-24 18:01:23 +0000 : LGVC viewWillAppear
+2023-06-24 18:01:23 +0000 : LGVC translateFromHistory
+2023-06-24 18:01:26 +0000 : LGVC translateButton_Clicked
+2023-06-24 18:01:29 +0000 : LGVC copyButton_Clicked
