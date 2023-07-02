@@ -1,16 +1,26 @@
+import os
 from pathlib import PurePath, Path
 from flask import Flask, request, render_template, redirect, url_for, make_response, session
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.secret_key = '48d935e6d7bedc431ae1f101c032b1227ad2c79689df0932c93a1e3be28e9c3b'
+app.secret_key = os.environ.get('SECRET_KEY')
+
+USERNAME = os.environ.get('USERNAME')
+PASSWORD = os.environ.get('PASSWORD')
 
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        session['username'] = request.form.get('username')
-        return redirect(url_for('home'))
+        login_ = request.form.get('USERNAME')
+        password = request.form.get('PASSWORD')
+        if login_ not in USERNAME:
+            return f' login {login_} not found!'
+        if USERNAME == login_ and PASSWORD == password:
+            return redirect(url_for('home'))
+        else:
+            return f'login and password not complete!'
     return render_template('login.html')
 
 
