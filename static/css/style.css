@@ -232,3 +232,27 @@
     background: #6d8fe7;
 }
 
+.text_area{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+.btn_text_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn_text_{
+    background: #c0d0f3;
+    width: 90px;
+    height: 40px;
+    color: #7e8386;
+}
+
+.btn_text_:hover{
+    background-color: #254cf5;
+    color: white;
+}

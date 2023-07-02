@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} <title>COUNT NUMBERS</title>{% endblock %}
+
+{% block content %}
+<h2> результат: </h2>
+    <form action="/count_num" method="post">
+        <input type="number" name="num1" placeholder="input numper1">
+        <input type="number" name="num2" placeholder="input number2">
+        <input type="submit" value="submit">
+    </form>
+
+
+{% endblock %}

@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% block title %} <title>THREE PAGE </title> {% endblock %}
 {% block content %}
+    <form action="/text_area/" method="POST">
+    <div class="text_area">
+    <textarea class="text_area_form" type="text" cols="30" rows="5" name="text_area" placeholder="enter your text"></textarea>
+    </div>
+    <div class="btn_text_area">
+    <input class="btn_text_" type="submit" value="submit"></div></form>
 {% endblock %}
 {% block footer %} {% endblock %}

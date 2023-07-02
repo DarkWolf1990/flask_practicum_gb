@@ -40,9 +40,26 @@ def upload():
     return render_template('upload.html')
 
 
-@app.route('/text_area/')
+@app.route('/text_area/', methods=['GET', 'POST'])
 def text_area():
+    if request.method == 'POST':
+        text = request.form.get('text_area')
+        res = len(text.split())
+        return f'{res}'
     return render_template('text_area.html')
+
+
+@app.route('/count_num', methods=['GET', 'POST'])
+def count_num():
+    if request.method == 'POST':
+        num1 = request.form.get('num1')
+        num2 = request.form.get('num2')
+        a = int(num1)
+        b = int(num2)
+        c = a + b
+        return f'{c}'
+
+    return render_template('count_num.html')
 
 
 @app.route('/logout')
