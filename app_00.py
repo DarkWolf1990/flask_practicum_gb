@@ -57,7 +57,8 @@ def count_num():
         a = int(num1)
         b = int(num2)
         c = a + b
-        return f'{c}'
+        d = c*c
+        return f'{c} квадрат: {d} '
 
     return render_template('count_num.html')
 
