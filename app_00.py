@@ -16,17 +16,29 @@ def login():
         login_ = request.form.get('USERNAME')
         password = request.form.get('PASSWORD')
         if login_ not in USERNAME:
-            return f' login {login_} not found!'
+            context={'Такого логина': login_}
+            return render_template('message_login_not_found.html')
         if USERNAME == login_ and PASSWORD == password:
             return redirect(url_for('home'))
         else:
-            return f'login and password not complete!'
+            return render_template('message_login_password_not_feet.html')
     return render_template('login.html')
 
 
 @app.route('/home/')
 def home():
     return render_template('index.html')
+
+
+@app.route('/registration/', methods=['GET', 'POST'])
+def registration():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        mail = request.form.get('mail')
+        print(name, mail)
+        context = {'name': name, 'email': mail}
+        return render_template('message_name.html', **context)
+    return render_template('registration.html')
 
 
 @app.route('/upload/', methods=['GET', 'POST'])
@@ -57,8 +69,9 @@ def count_num():
         a = int(num1)
         b = int(num2)
         c = a + b
-        d = c*c
-        return f'{c} квадрат: {d} '
+        d = c**2
+        context = {'sum': c, 'square': d}
+        return render_template('result.html', **context)
 
     return render_template('count_num.html')
 

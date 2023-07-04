@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block nav %}
+    <nav class="nav">
+    <ul class="navigation">
+        <li><a class="nav_a" href="{{ url_for('login') }}">BACK</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+{% block content %}
+
+    <form action="/registration/" method="POST">
+     <div class="block_form_">
+        <input class="fild_name_form_" type="text" name="name" placeholder=" input your name ">
+        <input class="fild_email_form_" type="email" name="mail" placeholder=" input your email ">
+        <input class="login_fm_" type="submit" value="submit">
+     </div>
+    </form>
+{% endblock %}
