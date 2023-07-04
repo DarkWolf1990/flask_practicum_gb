@@ -263,26 +263,53 @@
     background-color: rgba(234, 240, 245, 0.73);
     border: 1px solid #132c93;
     width: 400px;
-    height: 250px;
+    height: 450px;
 }
 
 
 .fild_name_form_{
     background-color: #d7e9f8;
     border-radius: 5px;
-    color: #070783;
+    color: #0808c4;
     height: 30px;
-    margin-top: 60px;
-    margin-left: 120px;
+    margin-top: 40px;
+    margin-left: 70px;
+    width: 250px;
+    text-align: justify-all;
+}
+
+.fild_last_name_form_{
+     background-color: #d7e9f8;
+    border-radius: 5px;
+    color: #0808c4;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 250px;
+    text-align: justify-all;
+}
+
+.fild_password_form_{
+    background-color: #d7e9f8;
+    border-radius: 5px;
+    color: #0808c4;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 250px;
+    text-align: justify-all;
+
 }
 
 .fild_email_form_{
-    margin-top: 10px;
-     background-color: #d7e9f8;
+    background-color: #d7e9f8;
     border-radius: 5px;
-    color: #070783;
+    color: #0808c4;
     height: 30px;
-    margin-left: 120px;
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 250px;
+    text-align: justify-all;
 
 }
 
@@ -291,8 +318,8 @@
     margin-left: 138px;
     width: 110px;
     height: 40px;
-    background-color: #8cc5f5;
-    color: #070783;
+    background-color: #9df686;
+    color: #051d69;
 }
 
 .login_fm_:hover{

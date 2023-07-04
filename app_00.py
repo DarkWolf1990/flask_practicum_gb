@@ -16,7 +16,7 @@ def login():
         login_ = request.form.get('USERNAME')
         password = request.form.get('PASSWORD')
         if login_ not in USERNAME:
-            context={'Такого логина': login_}
+            context = {'Такого логина': login_}
             return render_template('message_login_not_found.html')
         if USERNAME == login_ and PASSWORD == password:
             return redirect(url_for('home'))
@@ -33,11 +33,20 @@ def home():
 @app.route('/registration/', methods=['GET', 'POST'])
 def registration():
     if request.method == 'POST':
-        name = request.form.get('name')
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
         mail = request.form.get('mail')
-        print(name, mail)
-        context = {'name': name, 'email': mail}
-        return render_template('message_name.html', **context)
+        password = request.form.get('password')
+        password2 = request.form.get('password2')
+        context = {'first_name': first_name, 'last_name': last_name, 'password': password, 'password2': password2,
+                   'email': mail}
+        response = make_response(render_template('message_name.html', **context))
+        response.set_cookie('first_name', first_name)
+        response.set_cookie('last_name', last_name)
+        response.set_cookie('mail', mail)
+        response.set_cookie('password', password)
+        response.set_cookie('password2', password2)
+        return response
     return render_template('registration.html')
 
 
@@ -69,7 +78,7 @@ def count_num():
         a = int(num1)
         b = int(num2)
         c = a + b
-        d = c**2
+        d = c ** 2
         context = {'sum': c, 'square': d}
         return render_template('result.html', **context)
 
@@ -78,4 +87,10 @@ def count_num():
 
 @app.route('/logout')
 def logout():
-    return render_template('login.html')
+    response = make_response(redirect('/registration/'))
+    response.delete_cookie('first_name')
+    response.delete_cookie('last_name')
+    response.delete_cookie('mail')
+    response.delete_cookie('password')
+    response.delete_cookie('password2')
+    return response
