@@ -6,7 +6,8 @@ from flask_sqlalchemy import SQLAlchemy
 from models import db, User
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from forms import RegisterForm
+from forms_registration import RegisterForm
+from forms_login import LoginForm
 
 USERNAME = os.environ.get('USERNAME')
 PASSWORD = os.environ.get('PASSWORD')
@@ -26,17 +27,19 @@ def init_db():
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        login_ = request.form.get('USERNAME')
-        password = request.form.get('PASSWORD')
-        if login_ not in USERNAME:
-            context = {'Такого логина': login_}
-            return render_template('message_login_not_found.html')
-        if USERNAME == login_ and PASSWORD == password:
-            return redirect(url_for('home'))
-        else:
-            return render_template('message_login_password_not_feet.html')
-    return render_template('login.html')
+    form = LoginForm()
+    if request.method == 'POST' and form.validate():
+        pass
+        # login_ = request.form.get('USERNAME')
+        # password = request.form.get('PASSWORD')
+        # if login_ not in USERNAME:
+        #     context = {'Такого логина': login_}
+        #     return render_template('message_login_not_found.html')
+        # if USERNAME == login_ and PASSWORD == password:
+        #     return redirect(url_for('home'))
+        # else:
+        #     return render_template('message_login_password_not_feet.html')
+    return render_template('login.html', form=form)
 
 
 @app.route('/home/')

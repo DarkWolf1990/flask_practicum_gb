@@ -9,10 +9,13 @@
 {% endblock %}
 {% block content %}
     <h2 class="login_h2">Для входа в систему ввидете логин и пароль! </h2>
-    <form class="login_form" method="post">
+    <form class="login_form" action="{{ url_for('login') }}" method="post">
     <div class="block_form">
-        <input class="fild_name_form" type="text" name="USERNAME" placeholder=" Введите ваше имя "><br>
-        <input class="fild_password_form" type="password" name="PASSWORD" placeholder=" Введите ваш пароль "><br>
+        <p class="fild_name_form" >{{ form.user_name.label }}<br>
+        {{ form.user_name(size=30) }}</p>
+        <p class="fild_password_form" > {{ form.password.label }}<br>
+        {{ form.password(size=30) }}
+        </p>
         <input class="login_fm" type="submit" value="Войти">
     </div>
     </form>

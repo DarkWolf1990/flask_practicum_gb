@@ -206,7 +206,8 @@
     color: #070783;
     height: 30px;
     margin-top: 60px;
-    margin-left: 120px;
+    margin-left: 80px;
+    max-width: 216px;
 }
 
 .fild_password_form{
@@ -215,7 +216,8 @@
     border-radius: 5px;
     color: #070783;
     height: 30px;
-    margin-left: 120px;
+    margin-left: 80px;
+    max-width: 216px;
 
 }
 
