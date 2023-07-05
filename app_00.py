@@ -29,16 +29,16 @@ def init_db():
 def login():
     form = LoginForm()
     if request.method == 'POST' and form.validate():
-        pass
-        # login_ = request.form.get('USERNAME')
-        # password = request.form.get('PASSWORD')
-        # if login_ not in USERNAME:
-        #     context = {'Такого логина': login_}
-        #     return render_template('message_login_not_found.html')
-        # if USERNAME == login_ and PASSWORD == password:
-        #     return redirect(url_for('home'))
-        # else:
-        #     return render_template('message_login_password_not_feet.html')
+        user_name = form.user_name.data
+        password = form.password.data
+        print(user_name, password)
+        if user_name not in USERNAME:
+            context = {'Такого логина': user_name}
+            return render_template('message_login_not_found.html')
+        if USERNAME == user_name and PASSWORD == password:
+            return redirect(url_for('home'))
+        else:
+            return render_template('message_login_password_not_feet.html')
     return render_template('login.html', form=form)
 
 
@@ -51,22 +51,21 @@ def home():
 def registration():
     form = RegisterForm()
     if request.method == 'POST' and form.validate():
-        pass
-    #     first_name = request.form.get('first_name')
-    #     last_name = request.form.get('last_name')
-    #     mail = request.form.get('mail')
-    #     password = request.form.get('password')
-    #     password2 = request.form.get('password2')
-    #     context = {'first_name': first_name, 'last_name': last_name, 'password': password, 'password2': password2,
-    #                'email': mail}
-    #     response = make_response(render_template('message_name.html', **context))
-    #     response.set_cookie('first_name', first_name)
-    #     response.set_cookie('last_name', last_name)
-    #     response.set_cookie('mail', mail)
-    #     response.set_cookie('password', password)
-    #     response.set_cookie('password2', password2)
-    #     return response
-    return render_template('registration.html', form = form)
+        first_name = form.first_name.data
+        last_name = form.last_name.data
+        mail = form.mail.data
+        password = form.password.data
+        password2 = form.password2.data
+        context = {'first_name': first_name, 'last_name': last_name, 'password': password, 'password2': password2,
+                   'email': mail}
+        response = make_response(render_template('message_name.html', **context))
+        response.set_cookie('first_name', first_name)
+        response.set_cookie('last_name', last_name)
+        response.set_cookie('mail', mail)
+        response.set_cookie('password', password)
+        response.set_cookie('password2', password2)
+        return response
+    return render_template('registration.html', form=form)
 
 
 @app.route('/upload/', methods=['GET', 'POST'])
