@@ -1,4 +1,4 @@
-from app_00 import *
+from app_00 import app
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

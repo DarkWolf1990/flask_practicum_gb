@@ -8,13 +8,27 @@
 {% endblock %}
 {% block content %}
 
-    <form action="/registration/" method="POST">
+    <form action="{{url_for('registration')}}" method="POST">
      <div class="block_form_">
-        <input class="fild_name_form_" type="text" name="first_name" placeholder=" input your first-name ">
-        <input class="fild_last_name_form_" type="text" name="last_name" placeholder=" input your last-name ">
-        <input class="fild_password_form_" type="password" name="password" placeholder=" input your password ">
-         <input class="fild_password_form_" type="password" name="password2" placeholder=" return your password ">
-         <input class="fild_email_form_" type="email" name="mail" placeholder=" input your email ">
+         {{ form.csrf_token }}
+        <p class="fild_name_form_">
+            {{ form.first_name.label }} <br>
+            {{ form.first_name(size=35) }}
+            </p>
+        <p class="fild_last_name_form_">
+            {{ form.last_name.label }} <br>
+        {{ form.last_name(size=35) }}
+        </p>
+         <p class="fild_password_form_" >
+             {{ form.password.label }} <br>
+         {{ form.password(size=35) }}
+         </p>
+         <p class="fild_password_form_" >{{ form.password2.label }}<br>
+         {{ form.password2(size=35) }}
+         </p>
+         <p class="fild_email_form_" > {{ form.mail.label }}<br>
+         {{ form.mail(size=35) }}
+         </p>
         <input class="login_fm_" type="submit" value="registation">
      </div>
     </form>

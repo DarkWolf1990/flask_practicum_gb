@@ -2,12 +2,26 @@ import os
 from pathlib import PurePath, Path
 from flask import Flask, request, render_template, redirect, url_for, make_response, session
 from werkzeug.utils import secure_filename
-
-app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY')
+from flask_sqlalchemy import SQLAlchemy
+from models import db, User
+from flask_wtf import FlaskForm
+from flask_wtf.csrf import CSRFProtect
+from forms import RegisterForm
 
 USERNAME = os.environ.get('USERNAME')
 PASSWORD = os.environ.get('PASSWORD')
+
+app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+db.init_app(app)
+csrf = CSRFProtect(app)
+
+
+@app.cli.command("init-db")
+def init_db():
+    db.create_all()
+    print('OK')
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -32,22 +46,24 @@ def home():
 
 @app.route('/registration/', methods=['GET', 'POST'])
 def registration():
-    if request.method == 'POST':
-        first_name = request.form.get('first_name')
-        last_name = request.form.get('last_name')
-        mail = request.form.get('mail')
-        password = request.form.get('password')
-        password2 = request.form.get('password2')
-        context = {'first_name': first_name, 'last_name': last_name, 'password': password, 'password2': password2,
-                   'email': mail}
-        response = make_response(render_template('message_name.html', **context))
-        response.set_cookie('first_name', first_name)
-        response.set_cookie('last_name', last_name)
-        response.set_cookie('mail', mail)
-        response.set_cookie('password', password)
-        response.set_cookie('password2', password2)
-        return response
-    return render_template('registration.html')
+    form = RegisterForm()
+    if request.method == 'POST' and form.validate():
+        pass
+    #     first_name = request.form.get('first_name')
+    #     last_name = request.form.get('last_name')
+    #     mail = request.form.get('mail')
+    #     password = request.form.get('password')
+    #     password2 = request.form.get('password2')
+    #     context = {'first_name': first_name, 'last_name': last_name, 'password': password, 'password2': password2,
+    #                'email': mail}
+    #     response = make_response(render_template('message_name.html', **context))
+    #     response.set_cookie('first_name', first_name)
+    #     response.set_cookie('last_name', last_name)
+    #     response.set_cookie('mail', mail)
+    #     response.set_cookie('password', password)
+    #     response.set_cookie('password2', password2)
+    #     return response
+    return render_template('registration.html', form = form)
 
 
 @app.route('/upload/', methods=['GET', 'POST'])
