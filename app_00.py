@@ -56,6 +56,9 @@ def registration():
         mail = form.mail.data
         password = form.password.data
         password2 = form.password2.data
+        user=User(first_name=first_name, last_name=last_name, mail=mail, password=password, password2=password2)
+        db.session.add(user)
+        db.session.commit()
         context = {'first_name': first_name, 'last_name': last_name, 'password': password, 'password2': password2,
                    'email': mail}
         response = make_response(render_template('message_name.html', **context))
